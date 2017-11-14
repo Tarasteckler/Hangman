@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <script src="hangman2.js"></script>
+    <link rel="stylesheet" href="hangman.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Hangman</h1>
+</header>
+
+    <h2> To begin, first select your level.</h2>
+<select id="level">
+    <option value="1">Easy</option>
+    <option value="2">Medium</option>
+    <option value="3">Hard</option>
+</select>
+
+<br>
+<br>
+<button name= start onclick="startGame()" >Start game</button>
+
+    <h2>Enter one letter in the box below to begin guessing! </h2>
+<input id="guess" type="text">
+
+<br>
+<div id="image"></div>
+
+<div id="dashes"></div>
+<div id="numGuesses"></div>
+<div id="guessedLetters"></div>
+
+<br>
+
+<button name= guess onclick="guessLetter()" >Guess</button>
+
+<br>
+<h2>Can't get enough? Click the button below to play again!</h2>
+<button name= again onclick="reset()" >Play again</button>
+
+
+</body>
+</html>
