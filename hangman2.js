@@ -10,6 +10,7 @@ var possibleLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 
 
 function startGame(){
+    document.getElementById("error").innerHTML = "";
     var strLevel = document.getElementById("level").value;
     var level = parseInt(strLevel);
     if (level === 1){
@@ -44,6 +45,12 @@ function printWord(){
 }
 
 function guessLetter() {
+    if (word.length === 0){
+        document.getElementById("error").innerHTML = "Error: You need to start a game before you can make a guess.";
+        document.getElementById("dashes").innerHTML = "";
+        document.getElementById("guess").value = "";
+        return;
+    }
     var guess = document.getElementById("guess").value;
     if (guessedLetters.indexOf(guess) > -1){
         document.getElementById("dashes").innerHTML = "You've already guessed that letter. Please try again.";
@@ -70,12 +77,14 @@ function guessLetter() {
 }
 
 function reset(){
-    guessLetter="";
+    word = "";
+    numGuesses = 10;
+    guessedLetters = [];
+    document.getElementById("guess").value = "";
     document.getElementById("dashes").innerHTML = "";
     document.getElementById("numGuesses").innerHTML = "Guesses remaining: " + numGuesses;
     document.getElementById("guessedLetters").innerHTML = "";
     document.getElementById("image").innerHTML = "";
-    guessedLetters = [];
 }
 
 function getImage(){
