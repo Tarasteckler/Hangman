@@ -1,6 +1,6 @@
 var word = "";
-var easyWords = ["hello", "pie", "cat", "hi", "bye", "pop", "red", "eat", "ape", "tea", "hey", "hay", "era", "roar", "sit"]
-var mediumWords = ["possum", "avocado", "rabbit", "happy", "yellow", "music", "tree", "holiday", "school", "book", "jacket"]
+var easyWords = ["hello", "pie", "cat", "hi", "bye", "pop", "red", "eat", "ape", "tea", "hey", "hay", "era", "roar", "sit"];
+var mediumWords = ["possum", "avocado", "rabbit", "happy", "yellow", "music", "tree", "holiday", "school", "book", "jacket"];
 var hardWords = ["dictionary", "bagpipes", "thanksgiving", "xylophone", "trachea", "pterodactyl", "dwarves", "jinx", "mnemonic", +
 "antidisestablishmentarianism", "pneumonia", "numbskull", "wristwatch", "zigzagging", "syndrome"];
 var numGuesses = 10;
@@ -70,8 +70,9 @@ function guessLetter() {
 }
 
 function reset(){
+    guessLetter="";
     document.getElementById("dashes").innerHTML = "";
-    document.getElementById("numGuesses").innerHTML = "";
+    document.getElementById("numGuesses").innerHTML = "Guesses remaining: " + numGuesses;
     document.getElementById("guessedLetters").innerHTML = "";
     document.getElementById("image").innerHTML = "";
     guessedLetters = [];
