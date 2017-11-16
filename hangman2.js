@@ -72,7 +72,7 @@ function guessLetter() {
     if (numGuesses === 0) {
         document.getElementById("numGuesses").innerHTML = "";
         document.getElementById("guessedLetters").innerHTML = "";
-        document.getElementById("dashes").innerHTML = "GAME OVER!";
+        document.getElementById("dashes").innerHTML = "GAME OVER! Your word was: " + word;
     }
     document.getElementById("image").innerHTML = "<img src= 'img/" + getImage() + ".png'>";
 }
