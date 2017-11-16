@@ -40,7 +40,7 @@ function printWord(){
         document.getElementById("numGuesses").innerHTML = "";
         document.getElementById("guessedLetters").innerHTML = "";
         document.getElementById("dashes").innerHTML = "";
-        return "Congratulations! You guessed the word!";
+        return "Congratulations! You guessed the word! It was: " + word;
     }
     return dashedWord;
 }
