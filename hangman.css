@@ -1,19 +1,19 @@
 h1{
-    font-family: Klee;
-    font-size: 400%;
+    font-family: MingLiU, sans-serif;
+    font-size: 500%;
     color: hotpink;
     text-align: center;
     text-shadow: 4px 4px 8px pink;
 }
 
 h2{
-    font-family: Klee;
+    font-family: MingLiU, sans-serif;
     color: orange;
-    font-size: 150%;
+    font-size: 200%;
 }
 h3{
-    font-family: Klee;
-    font-size:100%;
+    font-family: MingLiU, sans-serif;
+    font-size: 150%;
     color: dodgerblue;
 }
 
@@ -37,21 +37,29 @@ body{
 
 #dashes, #numGuesses, #guessedLetters{
     color: hotpink;
-    width: 300px ;
-    font-family: Klee;
+    width: 400px ;
+    font-family: MingLiU, sans-serif;
 }
 
+select{
+    font-family: MingLiU, sans-serif;
+    border: 2px solid blue;
+
+}
 input[type=text]{
-    width: 10%;
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
     border: 2px solid orange;
+    font-family: MingLiU, sans-serif;
+
 
 }
 
 #image{
     display: block;
-    margin: auto;
+    margin-left: auto ;
+    margin-right: auto ;
     width: 20%;
 }
 
@@ -60,11 +68,11 @@ input[type=text]{
     margin-right: auto ;
 }
 
-#button{
-    font-family: Klee;
+button{
+    font-family: MingLiU, sans-serif;
     background-color: #FF6347;
     color: white;
     text-align: center;
     margin-left: auto;
-    margin-right: auto ;
+    margin-right: auto;
 }

@@ -8,9 +8,10 @@ var guessedLetters = [];
 var possibleLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
     "v", "w", "x", "y", "z"];
 
-
 function startGame(){
     document.getElementById("error").innerHTML = "";
+    document.getElementById("image").innerHTML = "<img src= img/one.png>";
+
     var strLevel = document.getElementById("level").value;
     var level = parseInt(strLevel);
     if (level === 1){

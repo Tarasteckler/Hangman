@@ -13,8 +13,10 @@
     <h1>Hangman</h1>
 </header>
 
-<h2>Try to guess all the letters in the word before you kill a man!</h2>
-    <h3> To begin, first select your level.</h3>
+<h2>Try to guess all the letters in a mystery word before you kill a man!</h2>
+
+<h3> To begin, first select the level you want.</h3>
+
 <select class= "center" id="level">
     <option value="1">Easy</option>
     <option value="2">Medium</option>
@@ -23,9 +25,10 @@
 
 <br>
 <br>
-<button id="button" name= start onclick="startGame()" >Start game</button>
+<button onclick="startGame()" >Start game</button>
 <br>
 <br>
+
 <input id="guess" type="text" placeholder="Enter a letter here" >
 
 <br>
@@ -37,13 +40,13 @@
 
 <br>
 
-<button id="button" name= guess onclick="guessLetter()"  >Guess</button>
+<button name= guess onclick="guessLetter()"  >Guess</button>
 
 <br>
 
 <h3>Click the button below to play again!</h3>
 
-<button id="button" name= again onclick="reset()" >Play again</button>
+<button name= again onclick="reset()" >Play again</button>
 
 </body>
 </html>
