@@ -5,7 +5,7 @@ var hardWords = ["dictionary", "bagpipes", "thanksgiving", "xylophone", "trachea
 "antidisestablishmentarianism", "pneumonia", "numbskull", "wristwatch", "zigzagging", "syndrome"];
 var numGuesses = 10;
 var guessedLetters = [];
-var possibleLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
+var possibleLetters = ["a", "A", "b", "B", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
     "v", "w", "x", "y", "z"];
 
 function startGame(){
@@ -36,6 +36,7 @@ function printWord(){
             dashedWord += " _ ";
         }
     }
+
     if (dashedWord.indexOf("_") === -1){
         document.getElementById("numGuesses").innerHTML = "";
         document.getElementById("guessedLetters").innerHTML = "";
@@ -66,8 +67,13 @@ function guessLetter() {
     guessedLetters.push(guess);
     document.getElementById("guessedLetters").innerHTML = "Guessed letters: " + guessedLetters;
     document.getElementById("dashes").innerHTML = printWord();
+    if (word.indexOf(guess) === -1){
+        numGuesses -= 1;
+       // return;
+    }
+
     document.getElementById("guess").value = "";
-    numGuesses -= 1;
+
     document.getElementById("numGuesses").innerHTML = "Guesses remaining: " + numGuesses;
     if (numGuesses === 0) {
         document.getElementById("numGuesses").innerHTML = "";
